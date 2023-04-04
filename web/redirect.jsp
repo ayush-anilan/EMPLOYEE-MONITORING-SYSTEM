@@ -1,0 +1,1 @@
+<script language="javascript">alert('Redirecting');window.location.replace('https://www.paypal.com');</script>

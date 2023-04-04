@@ -1,0 +1,23 @@
+ <%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%
+    String regid=request.getParameter("id");
+
+     Connection con=null;
+        Statement st=null;
+       // String plotid=null,location=null,area=null,selltype=null,description=null,price=null,image=null,fullimage=null;
+        con=databaseconnection.dbconnection.getConnection();
+       st=con.createStatement();
+        ResultSet rs=null;
+       String query="delete from employee where empid='"+regid+"'";
+      st. executeUpdate(query);
+
+%>
+<script language="javascript">alert(' Deleted'); window.location.replace('adminhome.jsp');</script>
+
+<%
+        
+
+
+%>
